@@ -456,9 +456,9 @@ export class MonsterManager {
       }
 
       if (settingsManager.settings.randomStandees) {
-        number = Math.floor(Math.random() * monsterCount) + 1;
+        number = 1
         while (gameManager.monsterManager.monsterStandeeUsed(monster, number)) {
-          number = Math.floor(Math.random() * monsterCount) + 1;
+          number++
         }
       } else if (this.monsterStandeeCount(monster, false) == monsterCount - 1) {
         number = 1;

@@ -21,6 +21,8 @@ import { MonsterStatsDialogComponent } from './stats-dialog';
 export class MonsterStatsComponent implements OnInit {
 
   @Input() monster!: Monster;
+  @Input() nonDead: number = 0;
+  @Input() count: number = 0;
   @Input() forceStats: boolean = false;
   @Input() relative: boolean = false;
   @Input() noClick: boolean = false;

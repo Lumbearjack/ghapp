@@ -1,8 +1,10 @@
 header {
   height: calc(var(--ghs-unit) * 8 * var(--ghs-text-factor) * var(--ghs-barsize));
   display: flex;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
+  gap: 8px;
 
   &::before {
     content: ' ';
@@ -51,7 +53,6 @@ header {
     margin: calc(var(--ghs-unit) * 2.2 * var(--ghs-text-factor) * var(--ghs-barsize));
     cursor: pointer;
 
-
     &:hover,
     &.active-button {
       color: var(--ghs-color-white);
@@ -75,7 +76,6 @@ header {
   }
 
   .server-connection {
-
     width: calc(var(--ghs-unit) * 2.5 * var(--ghs-text-factor) * var(--ghs-barsize));
     height: calc(var(--ghs-unit) * 2.5 * var(--ghs-text-factor) * var(--ghs-barsize));
     margin-right: calc(var(--ghs-unit) * 1);
@@ -193,6 +193,25 @@ header {
       margin: 0 calc(var(--ghs-unit) * 0.25 * var(--ghs-barsize));
       width: calc(var(--ghs-unit) * 7.4 * var(--ghs-barsize));
       height: calc(var(--ghs-unit) * 7.4 * var(--ghs-barsize));
+    }
+  }
+
+  .level-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    max-width: calc(100% - (var(--ghs-unit) * 15 * var(--ghs-text-factor) * var(--ghs-barsize)) - (var(--ghs-unit) * 38 * var(--ghs-text-factor) * var(--ghs-barsize)));
+
+    ghs-scenario {
+      height: 100%;
+    }
+
+    ghs-level {
+      height: 100%;
+      margin-left: calc(var(--ghs-unit) * 1 * var(--ghs-text-factor) * var(--ghs-barsize));
+      margin-top: calc(var(--ghs-unit) * 1 * var(--ghs-text-factor) * var(--ghs-barsize));
     }
   }
 }

@@ -1,8 +1,9 @@
 .image {
   position: relative;
   display: flex;
-  width: calc(var(--ghs-unit) * 16);
-  height: calc(var(--ghs-unit) * 16);
+  // width: calc(var(--ghs-unit) * 8);
+  // height: calc(var(--ghs-unit) * 21.6);
+  margin-bottom: 12px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -10,10 +11,12 @@
   cursor: pointer;
 
   img {
-    width: 100%;
-    height: auto;
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
     transition: box-shadow 100ms ease-in-out;
+    // object-fit: cover;
+    filter: brightness(1.4);
 
     &:not(.active-border) {
       box-shadow: 0px 0px calc(var(--ghs-unit) * 0.5) calc(var(--ghs-unit) * 0.1) var(--ghs-color-darkgray);

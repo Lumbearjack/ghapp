@@ -163,14 +163,14 @@
     color: var(--ghs-color-white);
     text-shadow: var(--ghs-outline);
     width: 100%;
-    margin-right: calc(var(--ghs-unit) * 1 * var(--ghs-text-factor));
+    margin-right: calc(var(--ghs-unit) * .4 * var(--ghs-text-factor));
     margin-top: calc(var(--ghs-unit) * 0.25 * var(--ghs-text-factor));
 
     .standee {
       position: relative;
       display: flex;
       height: 100%;
-      width: calc(var(--ghs-unit) * 9 * var(--ghs-text-factor));
+      width: calc(var(--ghs-unit) * 8 * var(--ghs-text-factor));
       border: calc(var(--ghs-unit) * 0.5 * var(--ghs-text-factor)) solid var(--ghs-color-black);
       border-bottom-width: calc(var(--ghs-unit) * 0.35 * var(--ghs-text-factor));
       border-top-left-radius: 25%;
@@ -234,8 +234,8 @@
         background-color: var(--ghs-color-white);
         border-bottom-right-radius: 50%;
         border-top-left-radius: 35%;
-        height: calc(var(--ghs-unit) * 4 * var(--ghs-text-factor));
-        font-size: calc(var(--ghs-unit) * 4 * var(--ghs-text-factor));
+        height: calc(var(--ghs-unit) * 3 * var(--ghs-text-factor));
+        font-size: calc(var(--ghs-unit) * 3 * var(--ghs-text-factor));
         text-shadow: none;
 
         &.highlight .value {
@@ -248,7 +248,7 @@
         font-size: calc(var(--ghs-unit) * 4.5 * var(--ghs-text-factor));
         position: relative;
         top: calc(var(--ghs-unit) * 1.2 * var(--ghs-text-factor));
-        left: 0;
+        left: -7px;
         height: calc(var(--ghs-unit) * 5 * var(--ghs-text-factor));
 
         &::before {
@@ -556,10 +556,10 @@
       position: absolute;
       bottom: calc(var(--ghs-unit) * 0.2 * var(--ghs-text-factor));
       left: calc(var(--ghs-unit) * 0.4 * var(--ghs-text-factor));
-      width: calc(var(--ghs-unit) * 8.2 * var(--ghs-text-factor));
+      width: calc(var(--ghs-unit) * 7.4 * var(--ghs-text-factor));
       height: calc(var(--ghs-unit) * 0.75 * var(--ghs-text-factor));
       z-index: 0;
-      border-radius: 15%;
+      border-radius: 1px;
       overflow: hidden;
     }
 
@@ -610,7 +610,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(var(--ghs-unit) * 9 * var(--ghs-text-factor));
+    width: calc(var(--ghs-unit) * 7.5 * var(--ghs-text-factor));
     height: 100%;
     z-index: 4;
   }

@@ -1911,6 +1911,10 @@
       ".": "Auto. active Items",
       "hint": "Automatically toggle permanent Items for active Character."
     },
+    "columnMonsters": {
+      ".": "Column Monsters",
+      "hint": "Stack monster elements in columns"
+    },
     "characterSheet": {
       ".": "Character Sheet",
       "hint": "Enable the Character Sheet. To open it, click on the big character icon on the right side."

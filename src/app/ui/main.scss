@@ -26,7 +26,7 @@ main {
   left: 0;
   right: 0;
   top: calc(var(--ghs-unit) * 8 * var(--ghs-text-factor) * var(--ghs-barsize));
-  bottom: calc(var(--ghs-unit) * 11 * var(--ghs-text-factor) * var(--ghs-barsize));
+  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -358,26 +358,30 @@ main {
   scrollbar-width: none;
   -ms-overflow-style: none;
 
+  // flex-wrap: wrap;
+  // justify-content: center;
+
   &::-webkit-scrollbar {
     display: none;
   }
 
   .figure {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transition: transform 250ms ease-in-out, width 100ms ease-in-out, height 250ms ease-in-out;
-    transform: scale(0);
-    overflow: unset;
+    // position: absolute;
+    // top: 0;
+    // left: 50%;
+    // transition: transform 250ms ease-in-out, width 100ms ease-in-out, height 250ms ease-in-out;
+    // overflow: unset;
+    transform: unset !important;
 
     .cdk-drag {
       position: relative;
-      width: calc(var(--ghs-unit) * 98);
-      margin: calc(var(--ghs-unit) * 0.8) calc(var(--ghs-unit) * 1);
+      // width: calc(var(--ghs-unit) * 98);
+      margin: calc(var(--ghs-unit) * 1.2) calc(var(--ghs-unit) * 1);
 
       :nth-child(2) {
         position: relative;
         display: block;
+        width: 300px;
       }
 
       &.enabled {

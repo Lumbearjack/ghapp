@@ -78,6 +78,7 @@ export class Settings {
   characterTraits: boolean = false;
   columns: boolean = true;
   columnsForce: boolean = false;
+  columnMonsters: boolean = true;
   combineInteractiveAbilities: boolean = true;
   combineSummonAction: boolean = true;
   debugEditWorldMap: boolean = false;

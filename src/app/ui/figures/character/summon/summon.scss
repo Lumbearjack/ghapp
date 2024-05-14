@@ -363,7 +363,7 @@
       width: calc(var(--ghs-unit) * 8.2 * var(--ghs-text-factor));
       height: calc(var(--ghs-unit) * 0.75 * var(--ghs-text-factor));
       z-index: 0;
-      border-radius: 15%;
+      border-radius: 1px;
       overflow: hidden;
       transition: width 500ms ease-out;
     }

@@ -71,12 +71,16 @@
         <ng-container *ngSwitchDefault><span [ghs-label]="'hints.' + hintState"></span></ng-container>
       </ng-container>
     </div>
-    <span class="spacer"></span>
-    <div *ngIf="gameManager.game.scenario && gameManager.characterManager.characterCount() > 0" class="event-effects"
+    <!-- <span class="spacer"></span> -->
+    <!-- <div *ngIf="gameManager.game.scenario && gameManager.characterManager.characterCount() > 0" class="event-effects"
       (click)="openEventEffects()">
       <img class="ghs-svg"
         [src]="'./assets/images/event' + (gameManager.game.round > 0 || gameManager.game.state == GameState.next ? '-effects' : '') + '.svg'">
-    </div>
+    </div> -->
+    <ghs-scenario #ghsScenario></ghs-scenario>
+    <ghs-level #ghsLevel></ghs-level>
+    <!-- <div class="level-container">
+    </div> -->
     <ghs-party-sheet #partySheet *ngIf="settingsManager.settings.partySheet"></ghs-party-sheet>
     <div *ngIf="settingsManager.settings.gameClock" class="game-clock" ghs-pointer-input
       (singleClick)="openGameClockDialog()" (doubleClick)="toggleGameClock()"
@@ -86,7 +90,7 @@
       <img class="ghs-svg"
         [src]="'./assets/images/'+ (lastGameClockTimestamp && !lastGameClockTimestamp.clockOut ? 'clock-out': 'clock-in') + '.svg'">
     </div>
-    <span class="spacer"></span>
+    <!-- <span class="spacer"></span> -->
     <div class="elements"
       [ngClass]="{'denied' : gameManager.stateManager.permissions && !gameManager.stateManager.permissions.elements}">
       <ghs-element *ngFor="let element of gameManager.game.elementBoard" [element]="element"></ghs-element>

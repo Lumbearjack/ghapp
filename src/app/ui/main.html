@@ -1,5 +1,5 @@
 <ghs-header #header></ghs-header>
-<main [ngClass]="{'compact' : footer.compact, 'modern' : settingsManager.settings.theme == 'modern'}"
+<main [ngClass]="{'compact' : footer.compact, 'modern' : settingsManager.settings.theme == 'modern', 'columnMonsters' : settingsManager.settings.columnMonsters}"
   ghs-keyboard-shortcuts [header]="header" [footer]="footer">
   <div
     *ngIf="gameManager.stateManager.updateBlocked && settingsManager.settings.serverUrl && settingsManager.settings.serverPort && settingsManager.settings.serverCode"
@@ -110,7 +110,7 @@
 
         <ghs-character [character]="gameManager.toCharacter(figure)" *ngIf="gameManager.isCharacter(figure)">
         </ghs-character>
-        <ghs-monster [monster]="gameManager.toMonster(figure)" *ngIf="gameManager.isMonster(figure)">
+        <ghs-monster [ngClass]="{'columnMonsters' : settingsManager.settings.columnMonsters}" [monster]="gameManager.toMonster(figure)" *ngIf="gameManager.isMonster(figure)">
         </ghs-monster>
         <ghs-objective-container [objective]="gameManager.toObjectiveContainer(figure)"
           *ngIf="gameManager.isObjectiveContainer(figure)">

@@ -1,6 +1,20 @@
 <div class="stats-container"
   [ngClass]="{'boss' : monster.boss, 'fh' : settingsManager.settings.fhStyle, 'no-click': noClick, 'denied' : gameManager.stateManager.permissions && !gameManager.stateManager.monsterPermissions[monster.name + '|' + monster.edition]}"
   #card [style.fontSize]="card.offsetWidth * 0.03 + 'px'">
+
+  <!-- <ghs-monster-numberpicker *ngIf="!monster.boss" class="normal" [monster]="monster" [type]="MonsterType.normal"
+  [nonDead]="nonDead" [count]="count"
+  [ngClass]="{'disabled' : settingsManager.settings.standees && nonDead >= count, 'denied' : gameManager.stateManager.permissions && !gameManager.stateManager.monsterPermissions[monster.name + '|' + monster.edition]}">
+</ghs-monster-numberpicker>
+<ghs-monster-numberpicker *ngIf="!monster.boss" class="elite" [monster]="monster" [type]="MonsterType.elite"
+  [nonDead]="nonDead" [count]="count"
+  [ngClass]="{'disabled' : settingsManager.settings.standees && nonDead >= count,'denied' : gameManager.stateManager.permissions && !gameManager.stateManager.monsterPermissions[monster.name + '|' + monster.edition]}">
+</ghs-monster-numberpicker>
+<ghs-monster-numberpicker *ngIf="monster.boss" class="boss" [monster]="monster" [type]="MonsterType.boss"
+  [nonDead]="nonDead" [count]="count"
+  [ngClass]="{'disabled' : settingsManager.settings.standees && nonDead >= count, 'denied' : gameManager.stateManager.permissions && !gameManager.stateManager.monsterPermissions[monster.name + '|' + monster.edition]}">
+</ghs-monster-numberpicker> -->
+
   <div #levelButton (click)="openLevelDialog()" class="level" [ghs-label]="'game.level'"
     [ghs-label-attribute]="'title'">{{monster.level}}
   </div>

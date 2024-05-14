@@ -3,8 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(var(--ghs-unit) * 98);
+  // width: calc(var(--ghs-unit) * 98);
   z-index: 1;
+
+  &.columnMonsters {
+    // border: 10px solid red;
+    flex-wrap: wrap;
+  }
 
   ghs-monster-ability-card,
   ghs-monster-stats,
@@ -51,7 +56,7 @@
   }
 
   ghs-monster-ability-card {
-    margin: 0 calc(var(--ghs-unit) * 0.5);
+    // margin: 0 calc(var(--ghs-unit) * 0.5);
     overflow: hidden;
     border-radius: calc(var(--ghs-unit) * 1);
   }
@@ -158,7 +163,7 @@
   display: flex;
   transition: max-height 1000ms ease-out;
   max-height: 100%;
-  max-width: calc(var(--ghs-unit) * 96);
+  // max-width: calc(var(--ghs-unit) * 96);
   margin-top: calc(var(--ghs-unit) * 0.25 * var(--ghs-text-factor));
   z-index: 2;
 
@@ -221,7 +226,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: calc(var(--ghs-unit) * 77.5);
+    // max-width: calc(var(--ghs-unit) * 77.5);
 
     &.normal {
       left: calc(var(--ghs-unit) * 0);

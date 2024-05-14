@@ -2,6 +2,7 @@
   [ngClass]="{'disabled' : gameManager.game.state == GameState.draw || monster.entities.length == 0, 'full-ability': settingsManager.settings.showFullAbilityCard, 'modern': settingsManager.settings.theme == 'modern'}"
   [ghs-label]="gameManager.game.state == GameState.next ? (monster.active ? 'game.figure.endTurn' : 'game.figure.startTurn') : ''"
   [ghs-label-attribute]="'title'">
+  <!-- <img  [src]="gameManager.monsterManager.monsterArtwork(monster)" [ngClass]="{'active-border' : monster.active}"> -->
   <img *ngIf="!monster.noThumbnail && settingsManager.settings.artwork"
     [ngClass]="{'active-border' : monster.active}" [src]="gameManager.monsterManager.monsterThumbnail(monster)" />
   <span *ngIf="monster.noThumbnail || !settingsManager.settings.artwork" class="no-artwork"
